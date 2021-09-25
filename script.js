@@ -19,3 +19,17 @@ setInterval( function() {
       }
       hour++;
   }
+     var vent = '';
+   function addIn() {
+     var ev = $('.textarea');
+     vent = ev.val().trim();
+     localStorage.setItem('eve', JSON.stringify(vent));
+     $('.textarea').append(JSON.parse(localStorage.getItem('eve')));
+   }
+     var save = $('.saveBtn');
+     save.on('click', addIn); 
+     console.log(vent);
+     
+     
+    
+     
